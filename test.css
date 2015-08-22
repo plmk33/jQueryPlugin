@@ -1,0 +1,21 @@
+/*
+ * PRUEBA DE CALIFICACION. Desarrollador PHP frontend
+ * Iker Luque Michel - luquemichel@gmail.com
+ * Codigo de dominio publico.
+ *
+ */
+
+ /*pequeña inicializacion*/
+
+p,h1,h2,h3 { /*texto negro sobre blanco*/
+    color:#000;
+    background: #fff;
+}
+ /*estilo*/
+
+.txtMod{
+    color:#f00; /*color texto MODificado por defecto*/
+}
+.fondoMod{
+    background-color:#0f0; /*color fondo MOD por defecto*/
+}
