@@ -13,22 +13,17 @@
 ;(function ($) {
     'use strict';
     $.fn.cambiaColorIkerLuque = function (queCambiar, aQueColor) {
-        var that=this;  //guardamos contexto
-        return this.each(function(){  //mantenemos chainability
+        var that = this;  //guardamos contexto
+        return this.each(function () {  //mantenemos chainability
 
-            if ( queCambiar === "texto"){
+            if (queCambiar === "texto") {
                 that.css("color", aQueColor);
-            }else if (queCambiar === "fondo"){
-                    that.css("backgroundColor", aQueColor);
-            }
-            else {
+            } else if (queCambiar === "fondo") {
+                that.css("backgroundColor", aQueColor);
+            } else {
                 //console.log("$.fn.cambiaColor: arg#0 no valido");
                  return this;
             }
-
-        }) //each
-       
+        });//each
     };
-      
-
 }(jQuery));
