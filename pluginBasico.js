@@ -2,28 +2,37 @@
  * PRUEBA DE CALIFICACION. Desarrollador frontend
  *  · Cambia el color de texto o el background del texto
  *  · Respeta chainability
- * PRUEBA DE CALIFICACION. Desarrollador PHP frontend
+ *  · DIFERENTES MÉTODOS para cada accion.
+ *  · Estado más basico posible del plugin, sin aceptar opciones etc
+ *
  * Iker Luque Michel - luquemichel@gmail.com
  * Codigo abierto. Dominio publico.
- * Codigo de dominio publico.
  *
  */
 
 // punto y coma inicial protege de otros plugins o scripts mal cerrados
 ;(function ($) {
     'use strict';
-    $.fn.cambiaColorIkerLuque = function (queCambiar, aQueColor) {
-        var that = this;  //guardamos contexto
-        return this.each(function () {  //mantenemos chainability
+    $.fn.cambiaColorIkerLuque = function () {
+        //llamamos a metodos_separados y pasamos el elemento_actual -this-
+        return new metodos_separados(this);
+    }
 
-            if (queCambiar === "texto") {
-                that.css("color", aQueColor);
-            } else if (queCambiar === "fondo") {
-                that.css("backgroundColor", aQueColor);
-            } else {
-                //console.log("$.fn.cambiaColor: arg#0 no valido");
-                 return this;
-            }
-        });//each
-    };
+    function metodos_separados(elemento_actual){
+        //console.log(this.isfunction);
+        this.texto = function (color){
+            //console.log(elemento_actual);
+            return $(elemento_actual).each( function () {
+                elemento_actual.css("color",color);
+                //console.log($(self));
+            })
+  
+        },
+        //funcion fondo
+        this.fondo = function(color){
+            return $(elemento_actual).each( function () {
+                elemento_actual.css("backgroundColor",color);
+            })
+        }   
+    }
 }(jQuery));
