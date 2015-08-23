@@ -2,30 +2,29 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="test.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="pluginBasico.js" >
-        <script src="pluginIkerLuque.js" ></script>
-  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+        <script src="pluginBasico.js"> </script>
     </head>
 
     <body>
-        <p id="pUno" class="texto">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
 
-        <p id="pDos" class="texto">" Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <h1 id="hUno">"Lorem ipsum"</h1>
+
+        <p id="pDos">" Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborun."</p>
          
         <script> 
 
-        
+            //test metodo fondo por separado
+            $("body").cambiaColorIkerLuque().fondo("#529CE5");
 
-            //$("p").cambiaColorIkerLuque().fondo();
+            //test metodo texto
+            $("p").cambiaColorIkerLuque().texto("#64579A")
+              .css("fontStyle","italic");
 
-            //$("p").cambiaColorIkerLuque.test();
-
-            //$("p").cambiaColorIkerLuque.texto();
-
-            $("p").cambiaColorIkerLuque("fondo", "#999"); 
-            
-           $("#pDos").             cambiaColorIkerLuque("fondo","red").cambiaColorIkerLuque("texto", "blue");
+            //test chaining
+            $("#hUno").css("textShadow","1px 1px 1px #243C55").
+              cambiaColorIkerLuque().texto("white").
+              cambiaColorIkerLuque().fondo("#529CE5");
 
         </script>
 

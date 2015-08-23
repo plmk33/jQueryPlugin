@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="test.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+        <script src="pluginExtra.js"> </script>
+    </head>
+
+    <body>
+
+        <h1 id="hUno">"Extra"</h1>
+
+        <p id="pDos">Plugin con metodos separados; Accesibles desde fuera de la funcion:
+        <br>
+        <br>
+        $("body").cambiaColorIkerLuque().fondo("black"); </p>
+         
+        <script> 
+
+            //test metodo fondo por separado
+            $("body").cambiaColorIkerLuque().fondo("grey");
+
+            //test metodo texto
+            $("p").cambiaColorIkerLuque().texto("#")
+              .css("fontStyle","italic");
+
+            //test chaining
+            $("#hUno").css("textShadow","1px 1px 1px black").
+              cambiaColorIkerLuque().texto("white").
+              cambiaColorIkerLuque().fondo("grey");
+
+        </script>
+
+    </body>
+</html>
+

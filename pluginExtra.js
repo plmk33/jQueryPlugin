@@ -3,6 +3,7 @@
  *  · Cambia el color de texto o el background del texto
  *  · Respeta chainability
  *  · DIFERENTES MÉTODOS para cada accion.
+ *  · Estado más basico posible del plugin, sin aceptar opciones etc
  *
  * Iker Luque Michel - luquemichel@gmail.com
  * Codigo abierto. Dominio publico.
